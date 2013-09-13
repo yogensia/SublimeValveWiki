@@ -3,7 +3,6 @@
 # and Search WordPress Codex by Matthias Krok (www.welovewordpress.de)
 
 # available commands
-#   valve_wiki_open_selection
 #   valve_wiki_search_selection
 #   valve_wiki_search_from_input
 
@@ -15,27 +14,8 @@ def OpenInBrowser(url):
     sublime.active_window().run_command('open_url', {"url": url})
 
 def SearchValveWikiFor(text):
-    url = 'https://developer.valvesoftware.com/w/index.php?title=Special%3ASearch&fulltext=Search&search=' + text.replace(' ','%20')
+    url = 'https://developer.valvesoftware.com/w/index.php?title=Special%3ASearch&go=Go&search=' + text.replace(' ','%20')
     OpenInBrowser(url)
-
-def OpenValveWikiReference(text):
-    url = 'https://developer.valvesoftware.com/wiki/' + text.replace(' ','%20')
-    OpenInBrowser(url)
-
-class ValveWikiOpenSelectionCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
-        for selection in self.view.sel():
-            # if the user didn't select anything, search the currently highlighted word
-            if selection.empty():
-                selection = self.view.word(selection)
-
-            text = self.view.substr(selection)
-
-            # if the search string doesn't contain '$' add it to it
-            if not '$' in text:
-                text = '$' + text
-
-            OpenValveWikiReference(text)
 
 class ValveWikiSearchSelectionCommand(sublime_plugin.TextCommand):
     def run(self, edit):
