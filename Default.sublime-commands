@@ -1,26 +1,14 @@
 [
     {
-        "caption": "WordPress Codex: Search Selection",
-        "command": "wordpress_codex_search_selection"
+        "caption": "Valve Wiki: Open Reference",
+        "command": "valve_wiki_open_selection"
     },
     {
-        "caption": "WordPress Codex: Open Function Reference",
-        "command": "wordpress_codex_open_selection"
+        "caption": "Valve Wiki: Search Selection",
+        "command": "valve_wiki_search_selection"
     },
     {
-        "caption": "WordPress Codex: Search from Input",
-        "command": "wordpress_codex_search_from_input"
-    },
-    {
-        "caption": "WP Queryposts: Search Selection",
-        "command": "query_posts_search_selection"
-    },
-    {
-        "caption": "WP QueryPosts: Open Function Reference",
-        "command": "query_posts_codex_open_selection"
-    },
-    {
-        "caption": "WP Queryposts: Search from Input",
-        "command": "query_posts_search_from_input"
+        "caption": "Valve Wiki: Search from Input",
+        "command": "valve_wiki_search_from_input"
     }
 ]

@@ -1,18 +1,10 @@
 [
     {
-        "command": "wordpress_codex_search_selection",
-        "caption": "Search WordPress Codex"
+        "command": "valve_wiki_open_selection",
+        "caption": "Valve Wiki Reference"
     },
     {
-        "command": "wordpress_codex_open_selection",
-        "caption": "WordPress Function Reference"
-    },
-    {
-        "command": "query_posts_search_selection",
-        "caption": "Search QueryPosts"
-    },
-    {
-        "command": "query_posts_open_selection",
-        "caption": "QueryPosts Function Reference"
+        "command": "valve_wiki_search_selection",
+        "caption": "Search Valve Wiki"
     }
 ]
