@@ -1,0 +1,2 @@
+Search Valve Dev Wiki v1.0.0 changelog:
+- Initial version with support to search for selected search or make custom searches.
