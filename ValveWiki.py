@@ -1,5 +1,6 @@
 # code modified by yogensia
-# based on Stackoverflow Search Plugin by Eric Martel (emartel@gmail.com / www.ericmartel.com) and Matthias Krok (www.welovewordpress.de)
+# based on Stackoverflow Search Plugin by Eric Martel (emartel@gmail.com / www.ericmartel.com)
+# and Search WordPress Codex by Matthias Krok (www.welovewordpress.de)
 
 # available commands
 #   valve_wiki_open_selection
@@ -8,7 +9,6 @@
 
 import sublime
 import sublime_plugin
-
 import subprocess
 
 def OpenInBrowser(url):
@@ -30,6 +30,11 @@ class ValveWikiOpenSelectionCommand(sublime_plugin.TextCommand):
                 selection = self.view.word(selection)
 
             text = self.view.substr(selection)
+
+            # if the search string doesn't contain '$' add it to it
+            if not '$' in text:
+                text = '$' + text
+
             OpenValveWikiReference(text)
 
 class ValveWikiSearchSelectionCommand(sublime_plugin.TextCommand):
